@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>whtevr-evt tests</title>
+
+	<link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+</head>
+<body>
+
+<div id="mocha"></div>
+
+<div class="button--1 deletewhendone">Click for test 1</div>
+<script type="text/x-whtevr-evt" class="deletewhendone" data-evt="click" data-selector=".button--1">
+  <p id="test" class="whtevr-evt__content deletewhendone">this is a test 1</p>
+</script>
+
+<div class="button--2 deletewhendone">Click for test 2</div>
+<script type="text/x-whtevr-evt" class="deletewhendone" data-evt="click" data-selector=".button--2">
+  <p id="test2" class="whtevr-evt__content deletewhendone">this is a test 2</p>
+  <img src="http://41.media.tumblr.com/015a96c40e2f80a56dacfbcbd3b197f0/tumblr_n1gayrieM81sdyj9lo1_1280.jpg" alt="" class="deletewhendone" />
+</script>
+
+<div class="button--3 deletewhendone">Click for test 3 (no evt)</div>
+<script type="text/x-whtevr-evt" data-evt="" data-selector=".button--3" class="deletewhendone">
+  <p id="test3" class="whtevr-evt__content deletewhendone">another test 3</p>
+</script>
+
+<div class="button--4 deletewhendone">Click for test 4 (no selector, shouldn't work)</div>
+<noscript class="js-whtevr-evt" class="whtevr-evt__content deletewhendone" data-evt="click" data-selector="">
+  <p id="test4" class="deletewhendone">noscript test 4</p>
+</noscript>
+
+<button class="button--5 deletewhendone">Click for test 5</button>
+<noscript class="js-whtevr-evt" class="deletewhendone" data-evt="click" data-selector=".button--5">
+  <p id="test5" class="whtevr-evt__content deletewhendone">noscript test 5</p>
+</noscript>
+
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../index.js"></script>
+
+<script src="../node_modules/mocha/mocha.js"></script>
+<script src="../node_modules/should/should.js"></script>
+
+<script>
+	mocha.setup('bdd');
+</script>
+
+<script src="whtevr.spec.js"></script>
+
+<script>
+	if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+	else { mocha.run(); }
+</script>
+
+</body>
+</html>
