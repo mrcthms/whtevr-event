@@ -1,6 +1,6 @@
 {
-  "name": "whtevr-evt",
-  "version": "0.2.0",
+  "name": "whtevr-event",
+  "version": "0.1.0",
   "description": "A lazy load library that just doesn't care",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrcthms/whtevr-evt"
+    "url": "https://github.com/mrcthms/whtevr-event"
   },
   "keywords": [
     "lazy",
@@ -19,9 +19,9 @@
   "author": "Marc Thomas <hello@mrcthms.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mrcthms/whtevr-evt/issues"
+    "url": "https://github.com/mrcthms/whtevr-event/issues"
   },
-  "homepage": "https://github.com/mrcthms/whtevr-evt",
+  "homepage": "https://github.com/mrcthms/whtevr-event",
   "dependencies": {
     "jquery": "^1.11.2"
   },

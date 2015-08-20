@@ -8,7 +8,7 @@
 
   var $window = $(window);
 
-  $('[type="text/x-whtevr-evt"], .js-whtevr-evt').each(function () {
+  $('[type="text/x-whtevr-event"], .js-whtevr-event').each(function () {
     var $this = $(this);
     var $newElement = $('<div />')
       .hide();
@@ -21,7 +21,7 @@
 
     function triggerFinished($data) {
       $this
-        .trigger('whtevr-evt-loaded', [ $data ])
+        .trigger('whtevr-event-loaded', [ $data ])
         .remove();
       $data.children().unwrap();
     }

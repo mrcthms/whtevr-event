@@ -1,4 +1,4 @@
-# whtevr-evt
+# whtevr-event
 
 > The lazy loading library that just doesn't care.
 
@@ -11,20 +11,20 @@ It relies on jQuery.
 ## Installation
 
 ```
-$ npm install --save whtevr-evt
+$ npm install --save whtevr-event
 ```
 
 ## Usage
 
-Put everything in a noscript tag with the class "js-whtevr-evt":
+Put everything in a noscript tag with the class "js-whtevr-event":
 
 ```html
-<noscript class="js-whtevr-evt" data-evt="click" data-selector="[data-js='load-js-content']">
+<noscript class="js-whtevr-event" data-evt="click" data-selector="[data-js='load-js-content']">
 	<img src="..." srcset="...">
 </noscript>
 ```
 
-Whenever an event matching the `data-evt` attribute on each `.js-whtevr-evt`
+Whenever an event matching the `data-evt` attribute on each `.js-whtevr-event`
 element is triggered on an element with a selector matching the `data-selector`
 attribute, the content will load.
 
@@ -37,7 +37,7 @@ as this module is designed to work with events on particular elements.
 An event will be fired when it is loaded:
 
 ```js
-$('.js-whtevr-evt').on('whtevr-loaded', function (e, $el) {
+$('.js-whtevr-event').on('whtevr-loaded', function (e, $el) {
 	picturefill({
 		elements: $el.toArray()
 	});

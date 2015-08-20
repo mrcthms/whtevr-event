@@ -9,7 +9,7 @@ describe('whtevr', function () {
 
   describe('init', function () {
     it('should not show anything initially', function () {
-      $('.whtevr-evt__content').length.should.equal(0);
+      $('.whtevr-event__content').length.should.equal(0);
     });
   });
 
@@ -26,11 +26,11 @@ describe('whtevr', function () {
     };
 
     before(function () {
-      $('[type="text/x-whtevr-evt"]').on('whtevr-evt-loaded', function (e, $el) {
+      $('[type="text/x-whtevr-event"]').on('whtevr-event-loaded', function (e, $el) {
         eventFired.script = true;
         $element.script = $el;
       });
-      $('.js-whtevr-evt').on('whtevr-evt-loaded', function (e, $el) {
+      $('.js-whtevr-event').on('whtevr-event-loaded', function (e, $el) {
         eventFired.noScript = true;
         $element.noScript = $el;
       });
